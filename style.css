@@ -385,6 +385,13 @@ a {
     margin-bottom: 15px;
 }
 
+.custom-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
 .icon-box span {
     display: block;
     font-weight: 600;
@@ -443,6 +450,13 @@ a {
     font-size: 1.5rem;
     margin: -60px auto 20px;
     border: 5px solid var(--accent-color);
+}
+
+.custom-timeline-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .timeline-content h3 {
@@ -785,6 +799,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .section-padding {
+        padding: 70px 5%;
+    }
+    
     .hero {
         flex-direction: column;
         text-align: center;
@@ -809,6 +827,16 @@ footer {
     
     .ayurveda-container, .nutrition-container {
         flex-direction: column;
+        text-align: center;
+    }
+    
+    .title-underline-left {
+        margin: 0 auto 25px;
+    }
+    
+    .ayurveda-icons {
+        margin-top: 30px;
+        width: 100%;
     }
     
     .timeline::before {
@@ -819,26 +847,104 @@ footer {
         margin-top: 50px;
         width: 100%;
     }
+    
+    .nutrition-table-container {
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 768px) {
+    .section-padding {
+        padding: 50px 5%;
+    }
+
     .nav-links {
         display: none;
     }
     
-    .hero-title {
-        font-size: 2.5rem;
+    .hero {
+        padding-top: 100px;
     }
     
-    .section-title h2 {
-        font-size: 2rem;
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .glass-badge {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+    
+    .section-title h2, .ayurveda-text h2, .nutrition-details h2 {
+        font-size: 1.8rem;
+    }
+    
+    .ayurveda-text p {
+        font-size: 1rem;
     }
     
     .purity-list {
         grid-template-columns: 1fr;
+        text-align: left;
+        max-width: 250px;
+        margin: 0 auto 20px;
+    }
+    
+    .icon-box {
+        padding: 20px 10px;
+    }
+    
+    .icon-box span {
+        font-size: 0.9rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
     }
     
     .benefit-card {
         flex: 1 1 100%;
+        min-width: 100%;
+        padding: 15px 20px;
+    }
+    
+    .cta-banner {
+        padding: 60px 5%;
+    }
+    
+    .cta-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .footer-content {
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
     }
 }
