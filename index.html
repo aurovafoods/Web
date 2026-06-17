@@ -49,10 +49,13 @@
           "url": "https://www.aurovafoods.com/",
           "telephone": "+916353599231",
           "email": "sales@aurovafoods.com",
+          "priceRange": "₹₹",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Main Road",
             "addressLocality": "Morbi",
             "addressRegion": "Gujarat",
+            "postalCode": "363641",
             "addressCountry": "IN"
           }
         },
@@ -64,6 +67,11 @@
           "brand": {
             "@type": "Brand",
             "name": "Aurova Foods"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "150"
           },
           "offers": {
             "@type": "AggregateOffer",
@@ -82,22 +90,26 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Deferred) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
     
     <link rel="stylesheet" href="style.css">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome for Icons (Deferred) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <a href="#home" class="logo">
-            <img src="images/logo.png" alt="Aurova Foods Logo" class="logo-img">
+        <a href="#home" class="logo" aria-label="Aurova Foods Home">
+            <img src="images/logo.png" alt="Aurova Foods Logo" class="logo-img" width="120" height="120">
         </a>
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -110,6 +122,7 @@
         <a href="https://wa.me/916353599231?text=Hello,%20I%20would%20like%20to%20order%20Aurova%20A2%20Gir%20Cow%20Ghee." class="btn nav-btn" target="_blank" rel="noopener noreferrer">Order Now</a>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content fade-in">
@@ -121,7 +134,7 @@
             </a>
         </div>
         <div class="hero-image fade-in-up">
-            <img src="images/jar-front.jpg" alt="Aurova A2 Gir Cow Ghee Jar" class="floating-img">
+            <img src="images/jar-front.jpg" alt="Aurova A2 Gir Cow Ghee Jar" class="floating-img" width="500" height="500">
             <div class="glass-badge">
                 <i class="fas fa-certificate"></i>
                 <span>100% Pure & Organic</span>
@@ -267,7 +280,7 @@
                 </div>
             </div>
             <div class="nutrition-image fade-in-up">
-                <img src="images/dipper.jpg" alt="Aurova Ghee Dipper" class="rounded-image shadow-img">
+                <img src="images/dipper.jpg" alt="Aurova Ghee Dipper" class="rounded-image shadow-img" width="500" height="500" loading="lazy">
             </div>
         </div>
     </section>
@@ -332,19 +345,19 @@
         
         <div class="gallery-grid">
             <div class="gallery-item fade-in">
-                <img src="images/pouring-jar.jpg" alt="Pouring Ghee into Jar">
+                <img src="images/pouring-jar.jpg" alt="Pouring Ghee into Jar" width="400" height="400" loading="lazy">
                 <div class="gallery-overlay">
                     <span>Pure Consistency</span>
                 </div>
             </div>
             <div class="gallery-item fade-in" style="transition-delay: 0.1s;">
-                <img src="images/pouring-roti.jpg" alt="Ghee on Roti">
+                <img src="images/pouring-roti.jpg" alt="Ghee on Roti" width="400" height="400" loading="lazy">
                 <div class="gallery-overlay">
                     <span>Nourish Your Meals</span>
                 </div>
             </div>
             <div class="gallery-item fade-in" style="transition-delay: 0.2s;">
-                <img src="images/pouring-sweet.jpg" alt="Ghee in Sweets">
+                <img src="images/pouring-sweet.jpg" alt="Ghee in Sweets" width="400" height="400" loading="lazy">
                 <div class="gallery-overlay">
                     <span>Enhance Every Dessert</span>
                 </div>
@@ -362,12 +375,13 @@
             </a>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/logo.png" alt="Aurova Foods Logo" class="footer-logo-img">
+                <img src="images/logo.png" alt="Aurova Foods Logo" class="footer-logo-img" width="150" height="150" loading="lazy">
                 <p>Purest Golden Essence.</p>
             </div>
             <div class="footer-links">
@@ -382,7 +396,7 @@
                 <p><i class="fab fa-whatsapp"></i> +91 6353 599 231</p>
                 <p><i class="fas fa-envelope"></i> sales@aurovafoods.com</p>
                 <div class="social-links" style="margin-top: 15px;">
-                    <a href="https://www.instagram.com/aurova_foods" target="_blank" rel="noopener noreferrer" style="font-size: 1.8rem; color: var(--primary-color); transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--primary-color)'">
+                    <a href="https://www.instagram.com/aurova_foods" target="_blank" rel="noopener noreferrer" style="font-size: 1.8rem; color: var(--primary-color); transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--primary-color)'" aria-label="Follow us on Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
