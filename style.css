@@ -598,6 +598,151 @@ a {
     box-shadow: var(--shadow-strong);
 }
 
+.launch-offer-banner {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--secondary-color);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-soft);
+    animation: pulse-soft 2s infinite;
+}
+
+.launch-offer-banner i {
+    margin-right: 8px;
+}
+
+@keyframes pulse-soft {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Pricing Section */
+.pricing-section {
+    background-color: #fff;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 320px;
+    transition: var(--transition-smooth);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-strong);
+}
+
+.featured-card {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-strong);
+    background: var(--accent-color);
+}
+
+.featured-card:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+.pricing-header h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.pricing-header p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.pricing-price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.pricing-price .currency {
+    font-size: 1.5rem;
+    vertical-align: super;
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.price-savings {
+    background: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 35px;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.pricing-features li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
 /* Gallery Section */
 .gallery {
     background-color: #fff;
@@ -910,6 +1055,18 @@ footer {
     
     .timeline-content h3 {
         font-size: 1.1rem;
+    }
+    
+    .pricing-card {
+        padding: 30px 20px;
+    }
+    
+    .featured-card {
+        transform: scale(1);
+    }
+    
+    .featured-card:hover {
+        transform: scale(1) translateY(-5px);
     }
     
     .benefit-card {
